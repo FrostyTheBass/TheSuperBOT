@@ -333,7 +333,7 @@
                 if (u.gRole < 2) return u.role;
                 else {
                     switch (u.gRole) {
-                        case 2:
+                        case 'Mr. Frosty TheBass':
                             return 7;
                         case 3:
                             return 8;
