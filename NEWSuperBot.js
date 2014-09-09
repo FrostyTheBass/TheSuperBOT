@@ -179,7 +179,7 @@
             intervalMessages: [],
             messageInterval: 5,
             songstats: true,
-            commandLiteral: "."
+            commandLiteral: "!"
         },
         room: {
             users: [],
