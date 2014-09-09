@@ -121,8 +121,8 @@
 
     };
 
-    var botCreator = "Matthew aka. Yemasthui";
-    var botCreatorIDs = [3930014] [3998944];
+    var botCreator = "Matthew aka. Yemasthui . Edited by : Mr. Frosty TheBass";
+    var botCreatorIDs = " [3930014] [3998944] ";
 
     var basicBot = {
         version: "2.5.1",
