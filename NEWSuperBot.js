@@ -35,7 +35,7 @@
 
     var loadChat = function(cb){
         if(!cb) cb = function(){};
-        $.get("https://rawgit.com/Yemasthui/basicBot/master/lang/langIndex.json", function(json){
+        $.get("https://raw.githubusercontent.com/FrostyTheBass/NewSuperBot/master/langindex.json", function(json){
             var link = basicBot.chatLink;
             if(json !== null && typeof json !== "undefined"){
                 langIndex = json;
@@ -137,7 +137,7 @@
         retrieveSettings: retrieveSettings,
         settings: {
             botName: "NEW SuperBot",
-            language: "Português",
+            language: "Portuguese",
             chatLink: "https://raw.githubusercontent.com/FrostyTheBass/NewSuperBot/master/pt.json",
             maximumAfk: 120,
             afkRemoval: false,
