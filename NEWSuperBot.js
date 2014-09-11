@@ -35,7 +35,7 @@
 
     var loadChat = function(cb){
         if(!cb) cb = function(){};
-        $.get("https://raw.githubusercontent.com/FrostyTheBass/NewSuperBot/master/langIndex.json", function(json){
+        $.get("https://rawgit.com/Yemasthui/basicBot/master/lang/langIndex.json", function(json){
             var link = basicBot.chatLink;
             if(json !== null && typeof json !== "undefined"){
                 langIndex = json;
@@ -121,7 +121,7 @@
 
     };
 
-    var botCreator = "Criado por Mr. Frosty TheBass";
+    var botCreator = "Matthew aka. Yemasthui . Edited by : Mr. Frosty TheBass";
     var botCreatorIDs = " [3930014] [3998944] ";
 
     var basicBot = {
@@ -131,14 +131,14 @@
         loggedInID: null,
         scriptLink: "https://raw.githubusercontent.com/FrostyTheBass/NewSuperBot/master/NEWSuperBot.js",
         cmdLink: "http://git.io/245Ppg",
-        chatLink: "https://raw.githubusercontent.com/FrostyTheBass/NewSuperBot/master/pt.json",
+        chatLink: "https://rawgit.com/Yemasthui/basicBot/master/lang/pt.json",
         chat: null,
         loadChat: loadChat,
         retrieveSettings: retrieveSettings,
         settings: {
             botName: "NEW SuperBot",
-            language: "portuguese",
-            chatLink: "https://raw.githubusercontent.com/FrostyTheBass/NewSuperBot/master/pt.json",
+            language: "Português",
+            chatLink: "https://rawgit.com/Yemasthui/basicBot/master/lang/pt.json",
             maximumAfk: 120,
             afkRemoval: false,
             maximumDc: 120,
@@ -1353,34 +1353,34 @@
                 }
             },
 
-            paoCommand: {
+            cookieCommand: {
                 command: 'pao',
                 rank: 'user',
                 type: 'startsWith',
-                pao: ['lhe deu um pão com chocolate!',
-                    'lhe deu um pão de aveia caseiro macio!',
-                    'lhe deu um simples e seco, pão de idade. Ele foi o último na bolsa. . Gross ',
-                    'Dá-lhe um pão com açúcar. O que, sem geada e polvilha? 0/10 não tocaria',
-                    'Dá-lhe um pão com chocolate. Oh, espere, não é pão. Bleck!',
-                    'Dá-lhe um enorme pão. Picar que lhe dá mais. Estranho.',
-                    'Dá-lhe um pão da sorte. Lê-se "Por que você não esta trabalhando em algum projeto?',
-                    'Dá-lhe um pão da sorte. Lê-se "Dê aquela pessoa especial um elogio" ',
-                    'Dá-lhe um pão da sorte. Lê "Tome um risco!',
-                    'Dá-lhe um pão da sorte. Lê "Vá para fora" ',
-                    'Dá-lhe um pão da sorte. Lê-se "Não se esqueça de comer seus legumes! ',
-                    'Dá-lhe um pão da sorte. Lê "Você levanta mesmo?" ',
-                    'Dá-lhe um pão da sorte. Lê "M808 pls" ',
-                    'Dá-lhe um pão da sorte. Lê "Se você mover os quadris, você vai obter todas as senhoras." ',
-                    'Dá-lhe um pão da sorte. Lê o "eu te amo". ',
-                    'Dá-lhe um pão de Ouro. Você pode não comer, porque ela é feita de ouro. Droga',
-                    'Dá-lhe um pão com um copo de leite! ',
-                    'Dá-lhe um pão arco-íris feito com amor: coração:',
-                    'Dá-lhe um pão velho que foi deixado de fora na chuva, ele está bolorento.',
-                    'Bakes você pão fresco, cheira incrível. '
+                cookies: ['lhe deu um pão com chocolate!',
+                        'lhe deu um pão de aveia caseiro macio!',
+                        'lhe deu um simples e seco, pão de idade. Ele foi o último na bolsa. . Gross ',
+                        'Dá-lhe um pão com açúcar. O que, sem geada e polvilha? 0/10 não tocaria',
+                        'Dá-lhe um pão com chocolate. Oh, espere, não é pão. Bleck!',
+                        'Dá-lhe um enorme pão. Picar que lhe dá mais. Estranho.',
+                        'Dá-lhe um pão da sorte. Lê-se "Por que você não esta trabalhando em algum projeto?',
+                        'Dá-lhe um pão da sorte. Lê-se "Dê aquela pessoa especial um elogio" ',
+                        'Dá-lhe um pão da sorte. Lê "Tome um risco!',
+                        'Dá-lhe um pão da sorte. Lê "Vá para fora" ',
+                        'Dá-lhe um pão da sorte. Lê-se "Não se esqueça de comer seus legumes! ',
+                        'Dá-lhe um pão da sorte. Lê "Você levanta mesmo?" ',
+                        'Dá-lhe um pão da sorte. Lê "M808 pls" ',
+                        'Dá-lhe um pão da sorte. Lê "Se você mover os quadris, você vai obter todas as senhoras." ',
+                        'Dá-lhe um pão da sorte. Lê o "eu te amo". ',
+                        'Dá-lhe um pão de Ouro. Você pode não comer, porque ela é feita de ouro. Droga',
+                        'Dá-lhe um pão com um copo de leite! ',
+                        'Dá-lhe um pão arco-íris feito com amor: coração:',
+                        'Dá-lhe um pão velho que foi deixado de fora na chuva, ele está bolorento.',
+                        'Bakes você pão fresco, cheira incrível. '
                 ],
-                getPao: function () {
-                    var c = Math.floor(Math.random() * this.pao.length);
-                    return this.pao[c];
+                getCookie: function () {
+                    var c = Math.floor(Math.random() * this.cookies.length);
+                    return this.cookies[c];
                 },
                 functionality: function (chat, cmd) {
                     if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
@@ -1390,20 +1390,20 @@
 
                         var space = msg.indexOf(' ');
                         if (space === -1) {
-                            API.sendChat(basicBot.chat.eatpao);
+                            API.sendChat(basicBot.chat.eatcookie);
                             return false;
                         }
                         else {
                             var name = msg.substring(space + 2);
                             var user = basicBot.userUtilities.lookupUserName(name);
                             if (user === false || !user.inRoom) {
-                                return API.sendChat(subChat(basicBot.chat.nouserpao, {name: name}));
+                                return API.sendChat(subChat(basicBot.chat.nousercookie, {name: name}));
                             }
                             else if (user.username === chat.un) {
-                                return API.sendChat(subChat(basicBot.chat.selfpao, {name: name}));
+                                return API.sendChat(subChat(basicBot.chat.selfcookie, {name: name}));
                             }
                             else {
-                                return API.sendChat(subChat(basicBot.chat.pao, {nameto: user.username, namefrom: chat.un, pao: this.getpao()}));
+                                return API.sendChat(subChat(basicBot.chat.cookie, {nameto: user.username, namefrom: chat.un, cookie: this.getCookie()}));
                             }
                         }
                     }
