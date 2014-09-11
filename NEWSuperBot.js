@@ -137,7 +137,7 @@
         retrieveSettings: retrieveSettings,
         settings: {
             botName: "NEW SuperBot",
-            language: "Portuguese",
+            language: "portuguese",
             chatLink: "https://raw.githubusercontent.com/FrostyTheBass/NewSuperBot/master/pt.json",
             maximumAfk: 120,
             afkRemoval: false,
